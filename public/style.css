@@ -1,0 +1,55 @@
+body{
+    text-align: center;
+    padding-top: 15vh;
+    background-color: chocolate;
+}
+
+.header{
+    color: bisque;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 3px;
+    font-size: 3rem;
+    margin-bottom: 1px;
+}
+.desc{
+    margin-top :2px;
+    color: bisque;
+}
+.base-url{
+    padding: 9px;
+    background-color: #a7a7a7;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid black;
+    width: 125px;
+}
+
+.unique-input{
+    padding: 9px;
+    border-radius: 0 8px 8px 0;
+    outline: none;
+    /* width: 150px; */
+    border: 1px solid black;
+}
+.url-input{
+    border-radius: 8px;
+    padding: 8px;
+    width: 300px;
+    outline : none;
+}
+
+button{
+    background-color: burlywood;
+    /* width: 60px; */
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+#confirmation{
+    font-style: italics;
+}
+
+a{
+    text-decoration: none;
+}

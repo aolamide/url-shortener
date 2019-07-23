@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { shortenUrl, openUrl } = require('../controllers/url');
+const { shortenUrl } = require('../controllers/url');
 
-router.get('/:unique_name', openUrl  );
-router.post('/new', shortenUrl);
+//shorten url route
+router.post('/', shortenUrl);
 
 module.exports = router;
