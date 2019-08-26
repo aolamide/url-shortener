@@ -1,9 +1,11 @@
 const { urlModel : Url } = require('../models/url');
 const validUrl = require('valid-url');
 const path = require('path');
+const dotenv = require('dotenv');
+dotenv.config();
 
 
-const baseUrl = 'http://localhost:3000';
+const baseUrl = process.env.BASE_URL;
 
 const shortenUrl = async (req, res) => {
     const { originalUrl, unique_name } = req.body;
@@ -31,7 +33,7 @@ const shortenUrl = async (req, res) => {
         return res.json({
             msg : 'success',
             ok : true,
-            newUrl : `http://localhost:3000/${url.unique_name}`
+            newUrl : `${process.env.BASE_URL}/${url.unique_name}`
         });
     }
 }
