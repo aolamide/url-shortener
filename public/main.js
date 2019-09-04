@@ -22,7 +22,7 @@ const formSubmit = e => {
     .then(data => data.json())
     .then(response => {
         if(!response.ok){
-            confirmation.innerText = response.msg
+            confirmationShow.innerText = response.msg
         }
         else {
             confirmationShow.innerHTML = `Hooray!!! The link can now be visited through <a target="_blank" href=${response.newUrl} rel = "noopener noreferer" > ${response.newUrl} </a>`
