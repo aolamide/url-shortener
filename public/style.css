@@ -56,6 +56,15 @@ button{
     background-color: transparent
 }
 
+#copyButton {
+    text-decoration: underline;
+}
+
+#copyButton:hover {
+    cursor : pointer;
+    color: aqua;
+}
+
 a{
     text-decoration: none;
 }

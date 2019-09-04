@@ -24,7 +24,8 @@ const formSubmit = e => {
             confirmation.innerText = response.msg
         }
         else {
-            confirmation.value = `Hooray!!! The link can now be visited through <a target='_blank' rel='noopener noreferer' href=${response.newUrl}>${response.newUrl}</a><br>`
+            confirmation.value = `Hooray!!! The link can now be visited through <a target='_blank' rel='noopener noreferer' href=${response.newUrl}>${response.newUrl}</a><br>`;
+            copyButton.innerText = 'Copy Link'
         }
     })
     .catch(err => console.log('oops', err))
