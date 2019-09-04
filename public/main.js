@@ -5,6 +5,7 @@ const uniqueName = document.getElementById('unique-name');
 const confirmation = document.getElementById('confirmation');
 const copyButton = document.getElementById('copyButton');
 
+let url;
 const formSubmit = e => {
     e.preventDefault();
     fetch('/new', {
@@ -24,8 +25,9 @@ const formSubmit = e => {
             confirmation.innerText = response.msg
         }
         else {
-            confirmation.value = `Hooray!!! The link can now be visited through <a target='_blank' rel='noopener noreferer' href=${response.newUrl}>${response.newUrl}</a><br>`;
-            copyButton.innerText = 'Copy Link'
+            confirmation.value = `Hooray!!! The link can now be visited through ${response.newUrl}`;
+            copyButton.innerText = 'Copy Link';
+            url = response.newUrrl;
         }
     })
     .catch(err => console.log('oops', err))
@@ -35,7 +37,7 @@ const copyText = ()  => {
     confirmation.select();
     confirmation.setSelectionRange(0, 99999)
     document.execCommand("copy");
-    alert("Copied the link: " + confirmation.value + " to clipboard");
+    alert("Copied the link: " + url + " to clipboard");
 }
 
 urlForm.addEventListener('submit', formSubmit);
