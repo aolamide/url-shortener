@@ -11,6 +11,9 @@ body{
     font-size: 3rem;
     margin-bottom: 1px;
 }
+.header span {
+    font-style: italic;
+}
 .desc{
     margin-top :2px;
     color: bisque;
