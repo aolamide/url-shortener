@@ -51,6 +51,9 @@ button{
 
 #confirmation{
     font-style: italics;
+    border: none;
+    outline: none;
+    background-color: transparent
 }
 
 a{
