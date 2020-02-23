@@ -1,13 +1,14 @@
 body{
     text-align: center;
     padding-top: 15vh;
-    background-color: chocolate;
+    background : linear-gradient(to right, #aa5f15, #542008);
+}
+html, body {
     overflow: hidden;
 }
-
 .header{
     color: bisque;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Josefin Sans', Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 3px;
     font-size: 3rem;
     margin-bottom: 1px;
@@ -70,4 +71,25 @@ button{
 a{
     text-decoration: none;
     color: white;
+}
+
+.loader {
+	border: 8px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 8px solid orange;
+	width: 10px;
+	height: 10px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+	margin: 8px auto !important;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

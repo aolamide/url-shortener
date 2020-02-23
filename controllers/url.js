@@ -8,9 +8,10 @@ dotenv.config();
 const baseUrl = process.env.BASE_URL;
 
 const shortenUrl = async (req, res) => {
-    const { originalUrl, unique_name } = req.body;
+    let { originalUrl, unique_name } = req.body;
+    if(originalUrl.indexOf('http') === -1) originalUrl = 'https://' + originalUrl; 
     let nameExists = await Url.findOne({ unique_name });
-    if(!validUrl.isWebUri(originalUrl)) {
+    if(!validUrl.isUri(originalUrl)) {
         return res.json({
             msg : 'enter valid link',
             ok: false
@@ -50,8 +51,7 @@ const openUrl = async (req, res) => {
     } catch(err) {
         console.log(err);
         res.status(500).json('Server error');
-    }
-    
+    } 
 }
 
 const renderHtml = (req, res) => {
