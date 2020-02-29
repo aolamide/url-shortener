@@ -1,14 +1,21 @@
 body{
     text-align: center;
-    padding-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background : linear-gradient(to right, #aa5f15, #542008);
 }
 html, body {
+    font-family: 'Josefin Sans', Verdana, Geneva, Tahoma, sans-serif;
     overflow: hidden;
+    height: 100%;
+}
+form{
+    border: red;
+    padding-top: 15vh
 }
 .header{
     color: bisque;
-    font-family: 'Josefin Sans', Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 3px;
     font-size: 3rem;
     margin-bottom: 1px;
@@ -21,22 +28,23 @@ html, body {
     color: bisque;
 }
 .base-url{
-    padding: 9px;
+    padding: 10px;
     background-color: #a7a7a7;
     border-radius: 8px 0 0 8px;
     border: 1px solid black;
-    width: 70px;
+    width: 55px;
+    font-weight: bold
 }
 
 .unique-input{
-    padding: 9px;
+    padding: 10px;
     border-radius: 0 8px 8px 0;
     outline: none;
     border: 1px solid black;
 }
 .url-input{
     border-radius: 8px;
-    padding: 8px;
+    padding: 10px;
     width: 300px;
     outline : none;
 }
