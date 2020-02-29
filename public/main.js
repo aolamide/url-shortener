@@ -45,6 +45,7 @@ const copyText = ()  => {
     confirmation.select();
     confirmation.setSelectionRange(0, 99999)
     document.execCommand("copy");
+    confirmation.blur()
     alert("Copied " + confirmation.value);
     copyButton.innerText = ''
 }
