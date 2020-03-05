@@ -29,7 +29,7 @@ const formSubmit = e => {
         }
         else {
             e.target.reset()
-            confirmationShow.innerHTML = `Hooray!!! The link can now be visited through <a target="_blank" href=${response.newUrl} rel = "noopener noreferer" > ${response.newUrl} </a>`
+            confirmationShow.innerHTML = `Hooray!!! The link can now be visited through <a target="_blank" href=`https://${response.newUrl}` rel = "noopener noreferer" > ${response.newUrl} </a>`
             confirmation.value = response.newUrl;
             copyButton.innerText = 'Copy Link';
         }
