@@ -54,11 +54,7 @@ const openUrl = async (req, res) => {
     } 
 }
 
-const renderHtml = (req, res) => {
-    const html = path.join(__dirname, '/../public/index.html');
-    return res.sendFile(html);
-};
 
 module.exports = {
-    shortenUrl, openUrl, renderHtml
+    shortenUrl, openUrl
 }
