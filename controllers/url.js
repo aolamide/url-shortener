@@ -9,6 +9,10 @@ const baseUrl = process.env.BASE_URL;
 
 const shortenUrl = async (req, res) => {
     let { originalUrl, unique_name } = req.body;
+    unique_name = unique_name.trim();
+    if(!unique_name) {
+        return res.json({msg : 'Enter valid unique name', ok : false});
+    }
     if(originalUrl.indexOf('http') === -1) originalUrl = 'https://' + originalUrl; 
     let nameExists = await Url.findOne({ unique_name });
     if(!validUrl.isUri(originalUrl)) {
@@ -44,16 +48,16 @@ const openUrl = async (req, res) => {
     try{
       let url = await Url.findOne({ unique_name });
         if(url){
+            url.count = url.count + 1;
+            url.save();
             return res.redirect(url.originalUrl);
         } else {
-            return res.status(404).json('No url found');
+            return res.sendFile(path.join(__dirname, '../public/404.html'));
         }  
     } catch(err) {
-        console.log(err);
-        res.status(500).json('Server error');
+        res.status(500).json('SERVER ERROR');
     } 
 }
-
 
 module.exports = {
     shortenUrl, openUrl
