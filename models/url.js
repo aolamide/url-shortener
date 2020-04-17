@@ -13,11 +13,14 @@ const urlSchema = new mongoose.Schema({
         type : String,
         required : true
     },
+    count : {
+        type : Number,
+        default : 0
+    },
     date : {
         type : Date,
         default : Date.now
-    }
-    
+    } 
 });
 exports.urlModel = mongoose.model('Url', urlSchema);
 
