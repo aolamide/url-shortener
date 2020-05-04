@@ -27,8 +27,12 @@
       border-bottom: 2px dashed blue;
       padding: 10px 2px;
     }
+    .link div:first-child {
+      width: 80%;
+    }
     .urls {
       font-weight: 700;
+      word-wrap: break-word;
     }
     .count {
       font-weight: 900;
@@ -47,7 +51,7 @@
       return `
       <div class="link">
         <div>
-          <p class="urls"><a href='${link.shortUrl}'>${link.shortUrl}</a></p>
+          <p class="urls"><a href='/${link.unique_name}'>${link.shortUrl}</a></p>
           <p class="urls">${link.originalUrl}</p>
         </div>
         <div>
