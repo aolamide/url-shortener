@@ -13,11 +13,18 @@ const shortenUrl = async (req, res) => {
     if(!unique_name) {
         return res.json({msg : 'Enter valid unique name', ok : false});
     }
+    //Prevent user from entering my domain, this causes multiple redirects
+    if(originalUrl.indexOf(baseUrl) !== -1) return res.json({ok : false, msg : 'Link not allowed'});
+
+    //Allow only certain chars in unique_name
+    let valid = /^[A-Za-z0-9-_]+$/.test(unique_name);
+    if(!valid) return res.json({ok : false, msg : "Only 'A-Z', 'a-z', '0-9', '-' and '_' characters are allowed in the unique name"});
+
     if(originalUrl.indexOf('http') === -1) originalUrl = 'https://' + originalUrl; 
     let nameExists = await Url.findOne({ unique_name });
     if(!validUrl.isUri(originalUrl)) {
         return res.json({
-            msg : 'enter valid link',
+            msg : 'Enter valid link',
             ok: false
         });
     }
@@ -59,6 +66,13 @@ const openUrl = async (req, res) => {
     } 
 }
 
+const getAll = async (req, res) => {
+    let password = req.query.pass;
+    if(password !== process.env.STAT_PASSWORD) return res.json({error : 'Incorrect password'});
+    const links = await Url.find().sort('-count');
+    return res.json(links);
+};
+
 module.exports = {
-    shortenUrl, openUrl
-}
+    shortenUrl, openUrl, getAll
+};
