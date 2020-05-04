@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="URL shortening service rdre.me statistics">
+  <title>rdre.me stats</title>
+  <style>
+    h1{
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      color: rgb(175, 164, 164);
+    }
+    p {
+      margin: 5px;
+    }
+    .container {
+      width: 90vw;
+      max-width: 500px;
+      margin: auto;
+    }
+    .link{
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px dashed blue;
+      padding: 10px 2px;
+    }
+    .urls {
+      font-weight: 700;
+    }
+    .count {
+      font-weight: 900;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>STATS</h1>
+  <div class="container"></div>
+</body>
+<script>
+  const container = document.querySelector('.container');
+  function renderLinks(data) {
+    const links = data.map(link => {
+      return `
+      <div class="link">
+        <div>
+          <p class="urls"><a href='${link.shortUrl}'>${link.shortUrl}</a></p>
+          <p class="urls">${link.originalUrl}</p>
+        </div>
+        <div>
+          <p class="count">${link.count}</p>
+        </div>
+      </div>
+      `
+    }).join('');
+    container.innerHTML = links;
+  };
+
+  window.onload = async function() {
+    const pass = prompt('Enter password');
+    const response = await fetch(`/get/urls?pass=${pass}`);
+    const data = await response.json();
+    if(data.error) alert(data.error);
+    else {
+      renderLinks(data);
+    }
+  }
+</script>
+</html>
