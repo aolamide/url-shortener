@@ -25,21 +25,21 @@ const formSubmit = e => {
         })
         .then(data => data.json())
         .then(response => {
-            status.innerHTML = '<button>SHORTEN</button>'
+            status.innerHTML = '<button class="send">SHORTEN LINK</button>'
             if(!response.ok){
                 confirmationShow.innerText = response.msg;
             }
             else {
                 e.target.reset()
-                confirmationShow.innerHTML = `Hooray!!! The link can now be visited through <a target="_blank" href="https://${response.newUrl}" rel = "noopener noreferer" > ${response.newUrl} </a>`
+                confirmationShow.innerHTML = `Hooray!!! The link can now be visited through <a target="_blank" href="https://${response.newUrl}"> ${response.newUrl} </a>`
                 confirmation.value = 'https://' + response.newUrl;
-                copyButton.innerText = 'Copy Link';
+                copyButton.style.display = 'block';
             }
         })
         .catch(err => {
             console.log('oops', err);
-            status.innerHTML = '<button>SHORTEN</button>';
-            confirmationShow.innerText = 'Network error, retry'
+            status.innerHTML = '<button class="send">SHORTEN LINK</button>';
+            confirmationShow.innerText = "Oops, looks like you're offline";
         })
     };
 }
@@ -50,7 +50,7 @@ const copyText = ()  => {
     document.execCommand("copy");
     confirmation.blur()
     alert("Copied " + confirmation.value);
-    copyButton.innerText = ''
+    copyButton.style.display = 'none'
 }
 
 urlForm.addEventListener('submit', formSubmit);

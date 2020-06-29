@@ -1,95 +1,105 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #ddd;
+  overflow-x: hidden;
+  font-family: 'Josefin Sans', Verdana, Geneva, Tahoma, sans-serif;
+}
 body{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background : linear-gradient(to right, #aa5f15, #542008);
-}
-html, body {
-    font-family: 'Josefin Sans', Verdana, Geneva, Tahoma, sans-serif;
-    overflow: hidden;
-    height: 100%;
-}
-form{
-    border: red;
-    padding-top: 15vh
-}
-.header{
-    color: bisque;
-    letter-spacing: 3px;
-    font-size: 3rem;
-    margin-bottom: 1px;
-}
-.header span {
-    font-style: italic;
-}
-.desc{
-    margin-top :2px;
-    color: bisque;
-}
-.base-url{
-    padding: 10px;
-    background-color: #a7a7a7;
-    border-radius: 8px 0 0 8px;
-    border: 1px solid black;
-    width: 55px;
-    font-weight: bold
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.unique-input{
-    padding: 10px;
-    border-radius: 0 8px 8px 0;
-    outline: none;
-    border: 1px solid black;
+form {
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
-.url-input{
-    border-radius: 8px;
-    padding: 10px;
-    width: 300px;
-    outline : none;
+button.send {
+  font-weight: bold;
+  font-size: 17px;
+  padding: 15px;
+  color: white;
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+  border: 0;
+  background : linear-gradient(to right, rgb(32, 171, 213), rgb(10, 160, 242));
 }
-
-button{
-    background-color: burlywood;
-    padding: 10px;
-    border-radius: 10px;
-    outline: none;
-    cursor: pointer;
+button:hover{
+  cursor: pointer;
 }
-
-#confirmation{
-    display: block;
-    margin-left : 4000px;
-    height: 3px
+.form-group {
+  margin: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
 }
-
-#confirmationShow {
-    font-style: italics;
+input[type=url] {
+  width: 100%;
 }
-
-#copyButton {
-    text-decoration: underline;
+input{
+  padding: 13px;
+  box-sizing: border-box;
+  border: 0;
 }
-
-#copyButton:hover {
-    cursor : pointer;
-    color: aqua;
+input[type=text] {
+  border-left: 0;
+  width: 80%;
 }
-
-a{
-    text-decoration: none;
-    color: white;
+.f1 {
+  display: flex;
 }
-
+span {
+  background : #0099ff;
+  padding: 9px 7px 10px 9px;
+  border: 1px solid #0099ff;
+  border-right: none;
+  color: #063D08;
+  font-size: 20px;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 0;
+  margin-top: 50px;
+  color: dimgray;
+}
+.sl {
+  margin-top: 0;
+  text-align: center;
+  color: maroon;
+}
+a {
+  color: lightgray;
+}
+img:hover {
+  cursor: pointer;
+}
+.footer {
+  background-color: #0099ff; 
+  padding: 12px
+}
+@media screen and (max-width: 500px) {
+  form {
+    width: 90vw;
+  }
+}
 .loader {
 	border: 8px solid #f3f3f3;
 	border-radius: 50%;
-	border-top: 8px solid orange;
-	width: 10px;
-	height: 10px;
+	border-top: 8px solid #0099ff;
+	width: 30px;
+  height: 30px;
+  display: block;
 	-webkit-animation: spin 2s linear infinite;
 	animation: spin 2s linear infinite;
-	margin: 8px auto !important;
+	margin: 8px auto;
 }
 
 @-webkit-keyframes spin {
@@ -100,4 +110,31 @@ a{
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+#confirmation{
+  display: block;
+  position: absolute;
+  left : -9000px;
+  height: 3px;
+  background-color: #ddd;
+  color: #ddd;
+  outline: none;
+}
+
+#confirmationShow {
+  font-style: italics;
+  margin-top: 20px;
+  text-align: center;
+}
+#confirmationShow a {
+  font-weight: bold;
+  color: steelblue;
+}
+#copyButton {
+  text-decoration: underline;
+  background: none;
+  border: 0;
+  display: block;
+  margin: auto;
 }
