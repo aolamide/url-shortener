@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="pricing.css" />
+    <title>Rdre | URL shortner</title>
+  </head>
+  <body>
+    <header>
+        <nav>
+            <label for="toggle">&#9776</label>
+            <input type="checkbox" id="toggle" name="">
+            <div class="navList">
+                <div class="nav-Leftside">
+                    <h3 class="logo"><a href="/"><img src="../images/rdre.png" alt="logo" height="auto" width="150px"></a></h3>
+                    <ul class="nav-Menu">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/index.html#features">Features</a></li>
+                        <li><a href="/pricing"> Pricing</a></li>
+                    </ul>
+                </div>
+                <hr class="nav-line">
+                <div class="new-Rightside">
+                    <ul class="nav-MenuReg ">
+                        <li><a href="/signin">Login</a></li>
+                        <li ><a href="/signin">SignUp</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="pricing-section">
+      <div class="pricing-section-header">
+        <h1>Our Pricing</h1>
+        <span
+          >Annually
+          <label class="switch">
+            <input type="checkbox" id="toggle-btn"/>
+            <span class="slider round"></span>
+          </label>
+          Monthly</span
+        >
+      </div>
+      <div class="pricing-cards monthly">
+        <div class="card">
+          <h3>Basic</h3>
+          <p class="price">Free</p>
+          <ul>
+            <li>Shorten Links</li>
+            <li> - </li>
+            <li> - </li>
+          </ul>
+          <a class="cta-btn" href="#">Learn More</a>
+        </div>
+        <div class="card middle">
+          <h3>Professional</h3>
+          <p class="price">Coming..</p>
+          <ul>
+            <li>Shorten Links</li>
+            <li>Track Links Statistics</li>
+            <li>Track SM engagement</li>
+          </ul>
+          <a class="cta-btn" href="#">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>Master</h3>
+          <p class="price">Coming..</p>
+          <ul>
+            <li>Shorten Links</li>
+            <li>Track Links Statistics</li>
+            <li> - </li>
+          </ul>
+          <a class="cta-btn" href="#">Learn More</a>
+        </div> 
+      </div>
+      <div class="pricing-cards yearly">
+        <div class="card">
+            <h3>Basic</h3>
+            <p class="price">Free</p>
+            <ul>
+              <li>Shorten Links</li>
+              <li> - </li>
+              <li> - </li>
+            </ul>
+            <a class="cta-btn" href="#">Learn More</a>
+          </div>
+          <div class="card middle">
+            <h3>Professional</h3>
+            <p class="price">Coming..</p>
+            <ul>
+              <li>Shorten Links</li>
+              <li>Track Links Statistics</li>
+              <li>Track SM engagement</li>
+            </ul>
+            <a class="cta-btn" href="#">Learn More</a>
+          </div>
+          <div class="card">
+            <h3>Master</h3>
+            <p class="price">Coming..</p>
+            <ul>
+              <li>Shorten Links</li>
+              <li>Track Links Statistics</li>
+              <li> - </li>
+            </ul>
+            <a class="cta-btn" href="#">Learn More</a>
+          </div> 
+      </div>
+    </section>
+
+    <footer>
+        <p>
+            Built with love by <a href="https://twitter.com/olamideaboyeji">Olamide Aboyeji</a>. Front-End by <a href="https://twitter.com/oyefesotunmise">Oyefeso Oluwatunmise</a>
+        </p>
+    </footer>
+  </body>
+  <script>
+    const toggle_btn = document.getElementById("toggle-btn");
+    window.onload = function(){
+      console.log(toggle_btn); 
+      toggle_btn.checked = false;
+    };
+    toggle_btn.onclick = () => {
+      const monthly = document.getElementsByClassName("monthly")[0];
+      const yearly = document.getElementsByClassName("yearly")[0];
+      if (toggle_btn.checked) {
+        monthly.style.display = "flex";
+        yearly.style.display = "none";
+      } else {
+        monthly.style.display = "none";
+        yearly.style.display = "flex";
+      }
+    };
+  </script>
+</html>

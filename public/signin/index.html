@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>rdre.me - URL shortner</title>
+    <link rel="stylesheet" type="text/css" href="signin.css">
+    <!-- <link rel="javascript" type="text/javascript" href="signin.js"> -->
+</head>
+<body>
+    <header>
+        <nav>
+            <label for="toggle">&#9776</label>
+            <input type="checkbox" id="toggle" name="">
+            <div class="navList">
+                <div class="nav-Leftside">
+                    <h3 class="logo"><a href="/"><img src="../images/rdre.png" alt="logo" height="auto" width="150px"></a></h3>
+                    <ul class="nav-Menu">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/#features">Features</a></li>
+                        <li><a href="/pricing"> Pricing</a></li>
+                    </ul>
+                </div>
+                <hr class="nav-line">
+                <div class="new-Rightside">
+                    <ul class="nav-MenuReg ">
+                        <li><a href="#">Login</a></li>
+                        <li ><a href="#">SignUp</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+<div class="container" id="container">
+	<div class="form-container sign-up-container" id="sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your email for registration</span>
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+            <button  onclick="yetToLaunch()">Sign Up</button>
+            <p class="overlay-replace">Existing user? <span onClick="hideSignUp()">Sign In</span></p>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span>
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<a href="#">Forgot your password?</a>
+			<button  onclick="yetToLaunch()">Sign In</button>
+            <p class="overlay-replace">New user? <span onClick="showSignUp()">Sign Up</span></p>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+                <button class="ghost" id="signIn">Sign In</button>
+                
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<p>
+		Built with love by <a href="https://twitter.com/olamideaboyeji">Olamide Aboyeji</a>. Front-End by <a href="https://twitter.com/oyefesotunmise">Oyefeso Oluwatunmise</a>
+	</p>
+</footer>
+<script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+    const signUpContainer = document.getElementById('sign-up-container');
+
+    signUpButton.addEventListener('click', () => {
+    container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+    container.classList.remove("right-panel-active");
+    });
+
+    function showSignUp ()  {
+        signUpContainer.style.zIndex = "3";
+        signUpContainer.style.opacity = "1";
+        signUpContainer.style.width= "100%";
+    }
+
+    function hideSignUp ()  {
+        signUpContainer.style.zIndex = "2";
+        signUpContainer.style.opacity = "0";
+    }
+
+    function yetToLaunch() {
+    alert("Keep calm and give us some time, this feature is yet to launch");
+    }
+</script>
+</body>
+</html>

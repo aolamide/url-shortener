@@ -1,0 +1,140 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #ddd;
+  overflow-x: hidden;
+  font-family: 'Josefin Sans', Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+form {
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+button.send {
+  font-weight: bold;
+  font-size: 17px;
+  padding: 15px;
+  color: white;
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+  border: 0;
+  background : linear-gradient(to right, rgb(32, 171, 213), rgb(10, 160, 242));
+}
+button:hover{
+  cursor: pointer;
+}
+.form-group {
+  margin: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+input[type=url] {
+  width: 100%;
+}
+input{
+  padding: 13px;
+  box-sizing: border-box;
+  border: 0;
+}
+input[type=text] {
+  border-left: 0;
+  width: 80%;
+}
+.f1 {
+  display: flex;
+}
+span {
+  background : #0099ff;
+  padding: 9px 7px 10px 9px;
+  border: 1px solid #0099ff;
+  border-right: none;
+  color: #063D08;
+  font-size: 20px;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 0;
+  margin-top: 50px;
+  color: dimgray;
+}
+.sl {
+  margin-top: 0;
+  text-align: center;
+  color: maroon;
+}
+a {
+  color: lightgray;
+}
+img:hover {
+  cursor: pointer;
+}
+.footer {
+  background-color: #0099ff; 
+  padding: 12px
+}
+@media screen and (max-width: 500px) {
+  form {
+    width: 90vw;
+  }
+}
+.loader {
+	border: 8px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 8px solid #0099ff;
+	width: 30px;
+  height: 30px;
+  display: block;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+	margin: 8px auto;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#confirmation{
+  display: block;
+  position: absolute;
+  left : -9000px;
+  height: 3px;
+  background-color: #ddd;
+  color: #ddd;
+  outline: none;
+}
+
+#confirmationShow {
+  font-style: italics;
+  margin-top: 20px;
+  text-align: center;
+}
+#confirmationShow a {
+  font-weight: bold;
+  color: steelblue;
+}
+#copyButton {
+  text-decoration: underline;
+  background: none;
+  border: 0;
+  display: block;
+  margin: auto;
+}
