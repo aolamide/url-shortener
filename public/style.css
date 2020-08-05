@@ -310,7 +310,7 @@ hr{
     }
 
 .statistics{
-	height: 430px;
+	height: 460px;
 	width: 500px;
 	display: flex;
 	flex-direction: column;
@@ -585,7 +585,7 @@ img{
 	   margin: 30px;
 	   }
 	.statistics{
-	   height: 400px;
+	   height: 458px;
 	   width: 100%;
 	   padding: 5px;
 	   }
