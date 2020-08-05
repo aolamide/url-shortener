@@ -11,7 +11,7 @@ const formSubmit = e => {
     e.preventDefault();
     if(!uniqueName.value.trim()) confirmationShow.innerText = 'Enter a unique name';
     else {
-        status.innerHTML = '<button type="button" class="loader"></button>';
+        status.innerHTML = '<button disabled type="button" class="loader"></button>';
         fetch('/new', {
             method: 'POST',
             headers: {
@@ -25,7 +25,7 @@ const formSubmit = e => {
         })
         .then(data => data.json())
         .then(response => {
-            status.innerHTML = '<button class="send">SHORTEN LINK</button>'
+            status.innerHTML = '<button class="btn-shorten">Shorten Link</button>'
             if(!response.ok){
                 confirmationShow.innerText = response.msg;
             }
@@ -38,7 +38,7 @@ const formSubmit = e => {
         })
         .catch(err => {
             console.log('oops', err);
-            status.innerHTML = '<button class="send">SHORTEN LINK</button>';
+            status.innerHTML = '<button class="btn-shorten">Shorten Link</button>';
             confirmationShow.innerText = "Oops, looks like you're offline";
         })
     };

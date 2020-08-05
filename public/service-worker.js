@@ -1,11 +1,16 @@
 const CACHE_NAME = 'rdre-cache';
 const toCache = [
   '/',
+  '/pricing/',
+  '/pricing/pricing.css',
+  '/signin/',
+  '/signin/signin.css',
   '/index.html',
   '/js/main.js',
   '/js/view.js',
   '/style.css',
-  '/images/logo.png'
+  '/images/logo.png',
+  '/images/rdre.png',
 ];
 
 self.addEventListener('install', function(event) {
