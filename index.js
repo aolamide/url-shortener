@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const path = require('path');
 const db = require('./db');
+const cors = require('cors');
 
 //configure dotenv
 dotenv.config();
@@ -14,7 +15,9 @@ const app = express();
 db.connect();
 
 app.use(bodyParser.json());
+app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/p', (req, res) => res.sendFile(path.join(__dirname, 'public/index.html')));
 app.use('/', require('./routes'));
 app.use('/new', require('./routes/url'));
 

@@ -59,7 +59,7 @@ const openUrl = async (req, res) => {
             url.save();
             return res.redirect(url.originalUrl);
         } else {
-            return res.sendFile(path.join(__dirname, '../public/404.html'));
+            return res.send('Invalid link');
         }  
     } catch(err) {
         res.status(500).json('SERVER ERROR');

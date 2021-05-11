@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9e6f0d59.chunk.css",
+    "main.js": "/static/js/main.634a2332.chunk.js",
+    "main.js.map": "/static/js/main.634a2332.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.56e0affa.js",
+    "runtime-main.js.map": "/static/js/runtime-main.56e0affa.js.map",
+    "static/js/2.2c746bbf.chunk.js": "/static/js/2.2c746bbf.chunk.js",
+    "static/js/2.2c746bbf.chunk.js.map": "/static/js/2.2c746bbf.chunk.js.map",
+    "static/js/3.0542dcbc.chunk.js": "/static/js/3.0542dcbc.chunk.js",
+    "static/js/3.0542dcbc.chunk.js.map": "/static/js/3.0542dcbc.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.9e6f0d59.chunk.css.map": "/static/css/main.9e6f0d59.chunk.css.map",
+    "static/js/2.2c746bbf.chunk.js.LICENSE.txt": "/static/js/2.2c746bbf.chunk.js.LICENSE.txt",
+    "static/media/banner.css": "/static/media/bg-boost-desktop.772154c9.svg",
+    "static/media/pricing.css": "/static/media/bg-top.4980c1fd.svg",
+    "static/media/shortener.css": "/static/media/bg-shorten-desktop.0d9742f4.svg",
+    "static/media/icon-brand-recognition.8da37c26.svg": "/static/media/icon-brand-recognition.8da37c26.svg",
+    "static/media/icon-detailed-records.234e2f28.svg": "/static/media/icon-detailed-records.234e2f28.svg",
+    "static/media/icon-down.0c77426d.svg": "/static/media/icon-down.0c77426d.svg",
+    "static/media/icon-facebook copy.8deee3e3.svg": "/static/media/icon-facebook copy.8deee3e3.svg",
+    "static/media/icon-facebook.229c75a0.svg": "/static/media/icon-facebook.229c75a0.svg",
+    "static/media/icon-fully-customizable.35a63ba9.svg": "/static/media/icon-fully-customizable.35a63ba9.svg",
+    "static/media/icon-instagram copy.568b5795.svg": "/static/media/icon-instagram copy.568b5795.svg",
+    "static/media/icon-instagram.df587328.svg": "/static/media/icon-instagram.df587328.svg",
+    "static/media/icon-pinterest.a2d25ab4.svg": "/static/media/icon-pinterest.a2d25ab4.svg",
+    "static/media/icon-twitter copy.a0c5f64d.svg": "/static/media/icon-twitter copy.a0c5f64d.svg",
+    "static/media/icon-twitter.1d5c6d5e.svg": "/static/media/icon-twitter.1d5c6d5e.svg",
+    "static/media/icon-up.359200b2.svg": "/static/media/icon-up.359200b2.svg",
+    "static/media/illustration-working.69badb34.svg": "/static/media/illustration-working.69badb34.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.56e0affa.js",
+    "static/js/2.2c746bbf.chunk.js",
+    "static/css/main.9e6f0d59.chunk.css",
+    "static/js/main.634a2332.chunk.js"
+  ]
+}
